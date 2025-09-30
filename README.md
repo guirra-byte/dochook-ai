@@ -1,2 +1,2 @@
 # dochook-ai
-POC de processamento massivo de PDFs com ocultação inteligente de dados sensíveis com IA
+Aplicação para ocultar dados sensíveis em documentos .pdf com IA
