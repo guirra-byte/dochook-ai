@@ -1,13 +1,12 @@
 import RabbitMqProvider from "../../../core/providers/rabbitmq/index.js";
 import type { DocumentsUploadedRequest } from "../http/documents.controller.js";
 
-
 export default class DownloadDocumentsService {
   async execute(data: DocumentsUploadedRequest) {
     const rabbitMq = await RabbitMqProvider.instance();
     const queueConfig = {
       exchange: "docs_exchange",
-      name: "download_docs",
+      name: "download_new_docs",
       rountingKey: "new_docs",
     };
 
