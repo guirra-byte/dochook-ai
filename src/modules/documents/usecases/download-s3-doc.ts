@@ -1,13 +1,13 @@
-import type { DocumentsUploadedRequest } from "../../http/documents.controller.js";
-import S3Provider from "../../../../core/providers/aws/s3/index.js";
-import RabbitMqProvider from "../../../../core/providers/rabbitmq/index.js";
+import type { DocumentsUploadedRequest } from "../http/documents.controller.js";
+import S3Provider from "../../../core/providers/aws/s3/index.js";
+import RabbitMqProvider from "../../../core/providers/rabbitmq/index.js";
 
 export interface FullfilledDocDownload {
   filename: string;
   stream: ReadableStream<any>;
 }
 
-export default class DownloadS3Doc {
+class DownloadS3Doc {
   async execute({
     documents,
     bucket,
